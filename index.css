@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: limegreen;
+    padding: 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons ul {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+}
+
+.p-data{
+    display: flex;
+    gap: 30px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 300px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.images {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.form input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    width: 50%;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.map {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.mp{
+    display: inline;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.map-td{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.map-details{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 10px;
+    height: 100vh;
+    padding: 10px;
+    border: 5px solid limegreen;
+}
+
+.solar-data {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background-color: lightgray;
+    border: 5px solid limegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.yearly-bill {
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+    background-color: lightgray;
+    border: 5px solid limegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.building-view {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: lightyellow;
+    border: 5px solid limegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profits-savings {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    background-color: lightgray;
+    border: 5px solid limegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.empty-section {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+    background-color: lightgray;
+    border: 5px solid limegreen;
+}
+
+.sec3 {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    height: calc(100vh - 60px);
+}
+
+.left-column {
+    display: grid;
+    grid-template-rows:repeat(4, 1fr);
+    gap: 10px;
+}
+
+.right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+.energy-consumed,
+.units-consumed,
+.shading,
+.system-size,
+.tariff,
+.daytime-consumption,
+.sun-data {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.center-column {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    gap: 10px;
+    height: 620px;
+}
+
+.model {
+    background-color: lightyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+}
+
+.bottom-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.tariff,
+.daytime-consumption,
+.sun-data {
+    background-color: white;
+    border: 2px solid gray;
+}
+
+.solar-procurement-container {
+    display: grid;
+    grid-template-rows: auto auto 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.solar-procurement-header {
+    grid-column: span 2;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+.model-type-label {
+    grid-column: span 2;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.capex-graph-container, 
+.dpa-graph-container, 
+.ppa-graph-container, 
+.cost-graph-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    height: 40vh;
+}
+
+.capex-graph-container {
+    grid-column: 1fr;
+}
+
+.dpa-graph-container {
+    grid-column: 2;
+}
+
+.ppa-graph-container {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.cost-graph-container {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.sun-position-container {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.sun-position-header {
+    grid-column: span 3;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+.sun-details {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.solar-data {
+    grid-column: 1;
+    grid-row: 3;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.earth-map {
+    grid-column: 2;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    font-weight: bold;
+    font-size: 1.5rem;
+    height: 600px;
+}
+
+.land-details {
+    grid-column: 3;
+    grid-row: span 2;
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 448px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}

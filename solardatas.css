@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 10px;
+    height: 100vh;
+    padding: 10px;
+    border: 5px solid limegreen;
+}
+
+.solar-data {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background-color: lightgray;
+    border: 5px solid limegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.yearly-bill {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: lightgray;
+    border: 5px solid limegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.building-view {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: lightyellow;
+    border: 5px solid limegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profits-savings {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    background-color: lightgray;
+    border: 5px solid limegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.empty-section {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+    background-color: lightgray;
+    border: 5px solid limegreen;
+}
+
