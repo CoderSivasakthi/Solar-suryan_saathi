@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Data Layout</title>
+    <link rel="stylesheet" href="Solarcalc.css">
+</head>
+<body>
+    <header>
+        Solar System Datas
+    </header>
+    <div class="container">
+        <div class="left-column">
+            <div class="energy-consumed">
+                <h3>Energy Consumed</h3>
+                <div class="e-btn">
+                    <button class="dec">-</button>
+                    <input type="number" class="number-input" value="0" min="0">
+                    <button class="inc">+</button>
+                </div>
+                <p id="eval">1958655 KW</p>
+                <center>
+                    <button>HT</button>
+                    <button>LT</button>
+                </center>
+            </div>
+            <div class="units-consumed">
+                <h3>Units Consumed</h3>
+
+                <div class="e-btn">
+                    <button class="dec">-</button>
+                    <input type="number" class="number-input" value="0" min="0">
+                    <button class="inc">+</button>
+                </div>
+                    <center>
+                        <button>HT</button>
+                        <button>LT</button>
+                    </center>
+                </div>
+            <div class="shading">
+                <h3>Shading</h3>
+                <div class="e-btn">
+                    <button class="dec">-</button>
+                    <input type="number" class="number-input" value="0" min="0">
+                    <button class="inc">+</button>
+                </div>
+                <center>
+                    <button>HT</button>
+                    <button>LT</button>
+                </center>
+            </div>
+            <div class="system-size">
+                <h3>System Size</h3>
+                <div class="e-btn">
+                    <button class="dec">-</button>
+                    <input type="number" class="number-input" value="0" min="0">
+                    <button class="inc">+</button>
+                </div>
+                <center>
+                    <button>HT</button>
+                    <button>LT</button>
+                </center>
+            </div>
+        </div>
+        <div class="center-column">
+            <div class="model">
+                <div id="cesiumContainer"></div>
+                <div id="loadingOverlay"><h1>Loading...</h1></div>
+                <!-- <div id="toolbar">
+                <button id="toggleClassification">Toggle Classification</button>
+                </div> -->
+            </div>
+            <div class="bottom-row">
+                <div class="tariff">
+                    <h3>Tariff</h3>
+                    <div class="e-btn">
+                        <button class="dec">-</button>
+                    <input type="number" class="number-input" value="0" min="0">
+                    <button class="inc">+</button>
+                    </div>
+                    <center>
+                        <button>HT</button>
+                        <button>LT</button>
+                    </center>
+                </div>
+                <div class="daytime-consumption">
+                    <h3>Day-time Consumption</h3>
+                    <div class="e-btn">
+                        <button class="dec">-</button>
+                    <input type="number" class="number-input" value="0" min="0">
+                    <button class="inc">+</button>
+                    </div>
+                    <center>
+                        <button>HT</button>
+                        <button>LT</button>
+                    </center>
+                </div>
+                <div class="sun-data">
+                    <h3>Sun Datas</h3>
+                    <div class="e-btn">
+                        <button class="dec">-</button>
+                    <input type="number" class="number-input" value="0" min="0">
+                    <button class="inc">+</button>
+                    </div>
+                    <center>
+                        <button>HT</button>
+                        <button>LT</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="roof-type">
+                <h3>System Size</h3><br>
+                <p>675 kW</p>
+                <br>
+                <h3>Annual Generation</h3><br>
+                <p>12000 kWh</p>
+                <br>
+                <h3>Roof Type</h3>
+                <select name="" id="">
+                    <option value="">Roof type: Flat</option>
+                    <option value="">Roof type: slope 5'</option>
+                    <option value="">Roof type: slope 10'</option>
+                    <option value="">Roof type: slope 15'</option>
+                    <option value="">Roof type: slope 20'</option>
+                    <option value="">Roof type: slope 25'</option>
+                    <option value="">Roof type: slope 30'</option>
+                </select>
+                <h4>Roof Area</h4>
+                <br>
+                <p>1500 sqft</p>
+                <div class="e-btn">
+                    <button class="dec">-</button><input type="number"><button class="inc">+</button>
+                </div>
+                <center>
+                    <button>HT</button>
+                    <button>LT</button>
+                </center>
+                <br>
+                <h3>Solar not in use</h3>
+                <input type="number" placeholder="type the no of days..">
+            </div>
+            <div class="r2">
+                <h3>Your contribution to the Environment</h3><br>
+                <img src="" alt="fuel">
+                <p>600 cars off the road</p>
+                <br>
+                <img src="" alt="trees">
+                <p>25000</p>
+                <br>
+                <div class="finance">
+                <h3>Current Bill</h3>
+                <p>20.0 lakhs</p>
+                <br>
+                <h3>Bill with solar</h3>
+                <p>12.0 lakhs
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="solarcalc.js"></script>
+</body>
+</html>

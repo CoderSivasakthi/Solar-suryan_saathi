@@ -1,0 +1,75 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.sun-position-container {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.sun-position-header {
+    grid-column: span 3;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+.sun-details {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.solar-data {
+    grid-column: 1;
+    grid-row: 3;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.earth-map {
+    grid-column: 2;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    font-weight: bold;
+    font-size: 1.5rem;
+    height: 600px;
+}
+
+.land-details {
+    grid-column: 3;
+    grid-row: span 2;
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
