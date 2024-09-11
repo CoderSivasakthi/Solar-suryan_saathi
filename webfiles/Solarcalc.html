@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar System Data Layout</title>
-    <link rel="stylesheet" href="Solarcalc.css">
+    <link rel="stylesheet" href="/webfiles/Solarcalc.css">
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.93/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.93/Build/Cesium/Cesium.js"></script>
+
 </head>
 <body>
     <header>
@@ -16,10 +19,10 @@
                 <h3>Energy Consumed</h3>
                 <div class="e-btn">
                     <button class="dec">-</button>
-                    <input type="number" class="number-input" value="0" min="0">
+                    <input type="number" class="number-input" value="0" min="0" id="solarProduction">
                     <button class="inc">+</button>
                 </div>
-                <p id="eval">1958655 KW</p>
+                <p id="eval">0 KW</p>
                 <center>
                     <button>HT</button>
                     <button>LT</button>
@@ -30,7 +33,7 @@
 
                 <div class="e-btn">
                     <button class="dec">-</button>
-                    <input type="number" class="number-input" value="0" min="0">
+                    <input type="number" class="number-input" value="0" min="0" id="unitsConsumed">
                     <button class="inc">+</button>
                 </div>
                     <center>
@@ -51,10 +54,10 @@
                 </center>
             </div>
             <div class="system-size">
-                <h3>System Size</h3>
+                <h3><label for="systemSize">Solar System Size (kW):</label></h3>
                 <div class="e-btn">
                     <button class="dec">-</button>
-                    <input type="number" class="number-input" value="0" min="0">
+                    <input type="number" id="systemSize" placeholder="Enter system size in kW" required>
                     <button class="inc">+</button>
                 </div>
                 <center>
@@ -65,11 +68,16 @@
         </div>
         <div class="center-column">
             <div class="model">
-                <div id="cesiumContainer"></div>
-                <div id="loadingOverlay"><h1>Loading...</h1></div>
+                <div id="cesiumContainer" class="fullSize">
+                <!-- <div id="loadingOverlay"><iframe src="https://sandcastle.cesium.com/#c=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" frameborder="0"></iframe></div> -->
+                <div id="loadingOverlay">
+                    <!-- <iframe src="https://sandcastle.cesium.com/standalone.html#c=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" frameborder="0"></iframe> -->
+                </div>
+            </div>
                 <!-- <div id="toolbar">
                 <button id="toggleClassification">Toggle Classification</button>
                 </div> -->
+                
             </div>
             <div class="bottom-row">
                 <div class="tariff">
@@ -118,10 +126,10 @@
                 <h3>Annual Generation</h3><br>
                 <p>12000 kWh</p>
                 <br>
-                <h3>Roof Type</h3>
-                <select name="" id="">
-                    <option value="">Roof type: Flat</option>
-                    <option value="">Roof type: slope 5'</option>
+                <h3><label for="roofType">Roof Type:</label></h3>
+                <select name="" id="roofType" required>
+                    <option value="flat">Roof type: Flat</option>
+                    <option value="slope">Roof type: slope 5'</option>
                     <option value="">Roof type: slope 10'</option>
                     <option value="">Roof type: slope 15'</option>
                     <option value="">Roof type: slope 20'</option>
@@ -145,10 +153,10 @@
             <div class="r2">
                 <h3>Your contribution to the Environment</h3><br>
                 <img src="" alt="fuel">
-                <p>600 cars off the road</p>
+                <p><p id="treesSaved"></p> cars off the road</p>
                 <br>
                 <img src="" alt="trees">
-                <p>25000</p>
+                <p id="co2Saved"></p>
                 <br>
                 <div class="finance">
                 <h3>Current Bill</h3>
@@ -158,9 +166,11 @@
                 <p>12.0 lakhs
                 </p>
                 </div>
-            </div>
+            </div>  
         </div>
     </div>
-    <script src="solarcalc.js"></script>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.88/Build/Cesium/Cesium.js"></script>
+<script src="/webfiles/solarcalc.js"></script>
+<script src="/webfiles/common.js"></script>
 </body>
 </html>

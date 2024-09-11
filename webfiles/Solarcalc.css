@@ -1,3 +1,5 @@
+@import url(../templates/bucket.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -179,17 +181,27 @@ center{
 
 #cesiumContainer{
     width: 100%;
-    height: 100%;
-    margin: 0;
+    height: min-content ;
+    margin: auto;
     padding: 0;
-    background-color: rgba(42, 42, 42, 0.8);
 }
+
 #loadingOverlay{
-    position: absolute;
-    background-color: rgba(42, 42, 42, 0.8);
+    /* position: absolute;
+    background-color: red;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 0;
+    width: 100%;
+    height: 100%; */
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    height: 500px;
+    margin: auto;
+}
+#loadingOverlay iframe{
+    width: 100%;
+    height: 500px;
 }

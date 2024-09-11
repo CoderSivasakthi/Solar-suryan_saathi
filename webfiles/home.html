@@ -13,23 +13,45 @@
             <div class="form">
                 <h3>Address</h3>
                 <input type="text" placeholder="Field 1">
-                <h3>Area to fix solar(ft)</h3>
-                <input type="text" placeholder="Field 2">
+                <h3><label for="cost">Electricity Bill Cost (₹):</label></h3>
+                <input type="number" id="cost" placeholder="Enter total cost of bill" required>
+
+
                 <div class="p-data">
                 <button>Residential</button>
                 <button>Industrial</button>
                 <button>Commercial</button>
                 </div>
-                <button>Submit</button>
+
+                <button onclick="calculate()">Calculate</button>
             </div>
             
         </div>
-        <div id="map"></div>
+        <div id="map">
+            <div id="cesiumContainer" class="fullSize">
+                <div id="slider"></div>
+              </div>
+              <div id="loadingOverlay">
+                <!-- <iframe src="https://sandcastle.cesium.com/standalone.html#c=tVeBThs5EP2VufQqJVfYhXKnuwaCLkBakICgJi3SKVLr3XWyVh17ZXsTAuLfb2zvbjaQ5LhKAApZe+bNzJvxjDcMYZgyDfSOTDNOQadyHhNNNZiUAokYZ2YBRoKcUcXJAjiJKNcjEYYgBW5kIMeQC7dME2BTMqFqEVgBJ9QXDonTsQHNEgpo7ISJCVyRTEOXKkY43DKTwqVDhnc1tJRNUoeiqJY8NwxN3hKdor7Br2enlT2Mgha+AVEUZKTjXCFEtLD2HchSHIhIICYChDQQUTC5EiiLkFJhPGNgIqEZxQ9h+PNgFLq1JZqnEdS8dyhrI0CtJVBBRV/wlcicto1OyHmNfcJ5hcK8hzqmglZRYoQrATkcm2kXb8oSXIYIs+4oIFkGsRRjNskVcZQjToiCMZlSReBeyinmc0Y5EuOgPuKmsVWU0KncAW2IMjC3Oa27ljBNIuQEtRBeG5gxOqcKOiDoHE6pZvk0+OrWmqNG7J5PpTCECapGjR14GAlwbl6SBVVtGBOu6c7K4g2Lf6xuMTGWJ/JuufTYOrRuexe4VdLogvclKHx1WPqwCK+bJM+TPK+VLB6PqsYzIigv4SPUskpex1Z5odEp472oGQzGSk5vlJxhYamuXoi4aSMoJaUohEsRJ9/VmpqLpHnQGgkb2SaTgc7wKJ8xRWOX08qDwcp6cNn7OEQYT0xAkqS5CbG1lZ9mdQZaJT/+2Gwh6BVoeb+WlpeS8fni0/lWNlY4eHLWN5xzJCOSWDuOB10dhnrlvUZ5/PX+z4KKdaXuQquvbEhurTG9IKte2gm/QmZ/398/+LD/JL9Lk/8vx+C6Ozpq2+LKgcYG6zoqdx6srYWl0Yq2f2yTLGDW1kGVB9tOh3Iz+QSi3BjX7fFvMsEhbUGxm2Z2HhfurU+R83UkBtjAcagbTq3bQwdy4kAd36PGwAa9FgL7rhUxKvfttBmnFFssHurOsW/IAOu4t4AdKIQPrdyjT5SLy440RafY2a3NWOIgtdlPlRTsvrh7ZFIzl7iVBPi+655tGiupsvQKqQ4kMs6nOO2CCTU9Tu3XkwWWzajhRUaN2llw49IXzE1ptmOdLrKOVwIsuktbDmG5luEgFiV0IXHLEpPWxkuKxPOnI24QK0rFICMx7c1Q99wLNT2u54hTA1O8cnWxRmcU9d30clvjXPiCtvtN+2EdaPlksDE0f1kqtsoUKWqvOGUe7D/voKKcWMG+cx/tlHgB3hVKKoK7w6XGGpKwKp7z9O4JdgtCL/sC+iohbRZYs+4YduD7rw/7e3vBHvy26sTj2+9OZ1suVzVQ3LFQpCewDUVkuek6YpsVw82Cv5VM2KNgAXY25XO4yKgbo9/O+rfXNp+vaOfm4vr0/Ntg2P089JWzwZaF3o501f8y6H276n/tbXH5v2G8QyXMT8ZeVvtLSP5y89MUv9CMD6l3fWYNNXYaR64sj305A/zNppnEC2+ueDMIQkPxRYoYqsMox+ZnglgXVyUv/qZoUQ/lAlRNrI0vXO72QA+Xm7b62/DH3tvaGl7827CX3dWWIhL/mCiZi2Q3llziHfhNcmB/azJze74Qa0UxpXaAtwHPVt3E/a59ZcB78wf8qdYfn8XRTu2bYT0afO/S1j6d7+JlCPt5Xdv+OwpLAovnhM2AJZ01l36IOdEad8Y55wPEGjUq3pdqZUc/Pgpx7bi0UvteiXJJEpw5ff82a1XS/eNLvxgEwVGIj+s1jZQ8InUrXgILIjUm0+0w1Ms56yMJYjkNJ/gShJM9/Bc" frameborder="0"></iframe> -->
+            </div>
+        </div>
         <div class="mp">
-            <div class="map-td">3d view of</div>
+            <div class="map-td">
+                <div class="sketchfab-embed-wrapper tdv ">
+                    <!-- <iframe title="Institutional housing design, the Netherlands" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/e6dfb56b98124d5692639f725083e916/embed?autospin=1&autostart=1&annotations_visible=1&preload=1&annotation=1&ui_controls=0&ui_infos=0">
+                    </iframe> -->
+                    <p style=" color: #4A4A4A;">
+                        <!-- <a href="https://sketchfab.com/3d-models/institutional-housing-design-the-netherlands-e6dfb56b98124d5692639f725083e916?utm_medium=embed&utm_campaign=share-popup&utm_content=e6dfb56b98124d5692639f725083e916" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">
+                        </a>   -->
+                    </p> 
+                </div>
+                
+            </div>
+            
             <div class="map-details">map-deatils</div>
         </div>
     </main>
     <script src="home.js"></script>
+    <script src="common.js"></script>
 </body>
 </html>
