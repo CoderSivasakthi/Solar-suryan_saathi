@@ -69,15 +69,30 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}   
+
+/* Styling for the images container */
+.images{
+    display: flex;
+    width: 100%;
+    animation: slide 1.5s ease-in-out forwards;
+    height: 450px;
 }
 
-.images {
-    background-color: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height:250px;
+/* Styling for individual images */
+.images img {
+    width: 100%; /* Each image takes up a third of the container */
+    height: 70%;
 }
+
+    /* .images img{
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+        width: 100%;
+    } */
 
 .form {
     background-color: lightgray;
@@ -121,7 +136,6 @@ main {
 }
 
 .map-td{
-    background-color: lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,10 +144,18 @@ main {
 }
 .map-details{
     background-color: lightgray;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: 300px;
+    margin-top: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+.map-details p{
+    margin-left: 20px;
+    padding: 5px;
+    margin-top: 10px;
 }
 
 #loadingOverlay iframe{

@@ -48,28 +48,24 @@ body {
 
 .capex-graph-container {
     grid-column: 1fr;
-    height: 400px;
-    background: yellow;
+    height: 400px;  
 }
 
 .dpa-graph-container {
     grid-column: 2;
     height: 400px;
-    background: yellow;
 }
 
 .ppa-graph-container {
     grid-column: 1;
     height: 400px;
     grid-row: 4;
-    background: yellow;
 }
 
 .cost-graph-container {
     grid-column: 2;
     grid-row: 4;
     height: 400px;
-    background: yellow;
 }
 
 .solar-procurement-container img{
